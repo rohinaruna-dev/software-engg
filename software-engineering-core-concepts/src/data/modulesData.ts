@@ -500,5 +500,63 @@ export const modulesData: ModuleData[] = [
       "Agile does not mean 'chaotic coding with no plan.' It requires immense discipline to do correctly.",
       "Find your bugs early, or your users will find them for you (and post about them on Twitter)."
     ]
+  },
+  {
+    id: "process_models_waterfall",
+    title: "2. Process Models: The Waterfall Model",
+    shortDescription: "The granddaddy of SDLCs. Measure twice, cut once... and pray the client doesn't change their mind.",
+    emoji: "🌊",
+    academicContext: "The Waterfall model is the oldest and most strictly linear software development life cycle. You must complete one phase entirely before moving to the next. It's fantastic for predictability, but terrible if requirements change.",
+    detailedContent: [
+      {
+        sectionTitle: "Neat Definition: What is it really?",
+        content: "The Waterfall model is a sequential design process. Progress flows steadily downwards (like a waterfall) through the phases of **Requirements, Design, Implementation, Verification, and Maintenance**. Once water flows over the edge, it can't flow back up. Similarly, once a phase is finished, you lock it down and move on.",
+        codeSnippet: "// The ultimate Waterfall mindset:\nfunction buildSoftware() {\n  gather100PercentOfRequirements();\n  designEverySingleComponent();\n  writeAllTheCode();\n  testEverythingAtOnce();\n  deployAndPray();\n}"
+      },
+      {
+        sectionTitle: "The Relatable Explanation: The Drive-Thru Analogy 🍔",
+        content: "Imagine the Waterfall model like a fast-food drive-thru. \n\n1. **Requirements:** You yell your order into the speaker (I want a cheeseburger).\n2. **Design & Implementation:** The kitchen starts cooking exactly what you ordered.\n3. **Verification:** You get to the window and they hand you the bag.\n\nNow, imagine you reach the final window and say, *\"Actually, I've changed my mind. I want a spicy chicken sandwich instead.\"*\n\nThe cashier will look at you with deep, existential sadness. The burger is already made. To get a chicken sandwich, you have to drive all the way back around to the beginning of the line. That is exactly how a Waterfall developer feels when a client changes a requirement right before launch."
+      },
+      {
+        sectionTitle: "Real-Time Case Study: Building the Bank Mainframe 🏦",
+        content: "Let's look at a scenario where Waterfall was used (and why it caused pain).\n\n**The Client:** A massive traditional bank.\n**The Project:** A new highly-secure internal money transfer system.\n\n**The Timeline:**\n- **Year 1:** Business analysts spend 12 months writing a 500-page Requirements Document. It is signed in blood by the executives.\n- **Year 2:** Architects design the database schemas and system diagrams.\n- **Year 3:** Engineering builds the system exactly to spec.\n- **Year 4:** The app is finally delivered!\n\n**The Plot Twist:** By Year 4, the entire banking industry has shifted to mobile-first apps and biometric logins (FaceID). The bank's brand new system is perfectly secure, perfectly built to the Year 1 specifications, and completely useless to modern users because the Waterfall model didn't allow the team to pivot when market trends changed."
+      },
+      {
+        sectionTitle: "When should you ACTUALLY use Waterfall?",
+        content: "Despite the hate it gets, Waterfall is NOT dead. It is absolutely necessary for **highly-regulated, high-risk systems**.\n\nIf you are writing the software for an **airplane autopilot system**, a **medical pacemaker**, or a **nuclear reactor**, you *want* Waterfall. You want every single requirement locked down, aggressively reviewed, and heavily tested before a single line of code is written. You don't 'Agile' a pacemaker by shipping an MVP and saying, *\"We'll patch the heart-stopping bug in Sprint 2!\"*"
+      }
+    ],
+    quiz: [
+      {
+        id: "wf_q1",
+        question: "Which of the following projects is the BEST fit for the Waterfall Model?",
+        options: [
+          "A brand new social media app for Gen-Z.",
+          "An e-commerce website for a local bakery.",
+          "Flight control software for a commercial airliner.",
+          "A weekend hackathon project."
+        ],
+        correctAnswer: 2,
+        explanation: "Flight control software requires extreme predictability, massive upfront design, and zero room for failure. It's highly regulated, making Waterfall's strict, documentation-heavy phases perfect for it."
+      },
+      {
+        id: "wf_q2",
+        question: "What is the biggest weakness of the Waterfall model?",
+        options: [
+          "It forces developers to use older programming languages like C++.",
+          "It is highly resistant to changing requirements late in the development cycle.",
+          "It requires too many daily stand-up meetings.",
+          "It completely skips the testing phase."
+        ],
+        correctAnswer: 1,
+        explanation: "Because phases are sequential and locked down once completed, making changes late in the cycle requires going all the way back to the design phase, which is incredibly expensive and time-consuming."
+      }
+    ],
+    keyTakeaways: [
+      "Waterfall is sequential: Requirements ➔ Design ➔ Implementation ➔ Testing ➔ Deployment.",
+      "Once you finish a phase, you cannot easily go back. Changes are painful and expensive.",
+      "Horrible for startups where requirements change weekly.",
+      "Excellent for high-stakes, life-critical systems (medical, aerospace) where failure is not an option."
+    ]
   }
 ];
