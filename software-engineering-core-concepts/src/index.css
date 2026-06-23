@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f4f4f5; /* Zinc-100 */
+  color: #18181b; /* Zinc-900 */
+}
+
+/* Custom scrollbar helpers for dense content reading */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #e4e4e7; /* Zinc-200 */
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #181a1f; /* zinc-900 */
+  border: 2px solid #f4f4f5;
+  border-radius: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* ==========================================================================
+   NEO-BRUTALIST BENTO OVERRIDES FOR INTERACTIVE SANDBOX GRAPHIC BOXES
+   ========================================================================== */
+
+#importance_game, 
+#problem_solving_game, 
+#modelling_game, 
+#knowledge_game, 
+#rationale_game, 
+#umbrella_game, 
+#challenges_game, 
+#sdlc_game {
+  background-color: #18181b !important; /* Intense charcoal bento shell */
+  border: 2.5px solid #09090b !important;
+  box-shadow: 4px 4px 0px 0px #000000 !important;
+  border-radius: 14px !important;
+  color: #f4f4f5 !important;
+}
+
+/* Soft text overrides for high accessibility contrast */
+#importance_game p,
+#problem_solving_game p,
+#modelling_game p,
+#knowledge_game p,
+#rationale_game p,
+#umbrella_game p,
+#challenges_game p,
+#sdlc_game p {
+  color: #e4e4e7 !important; /* Zinc-200 */
+}
+
+/* Sandbox Titles */
+#importance_game h3, 
+#problem_solving_game h3, 
+#modelling_game h3, 
+#knowledge_game h3, 
+#rationale_game h3, 
+#umbrella_game h3, 
+#challenges_game h3, 
+#sdlc_game h3 {
+  color: #facc15 !important; /* Energetic Amber */
+  font-family: var(--font-sans) !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  font-style: italic !important;
+  letter-spacing: -0.025em !important;
+}
+
+/* Dark metric panels to look like real mechanical slots */
+#importance_game .grid > div, 
+#problem_solving_game .grid > div {
+  background-color: #27272a !important; /* Zinc-850 */
+  border: 2px solid #09090b !important;
+  box-shadow: 2px 2px 0px 0px #000000 !important;
+  border-radius: 8px !important;
+}
+
+/* Ensure buttons in simulation games remain deeply neo-brutalist and clickable */
+#importance_game button, 
+#problem_solving_game button, 
+#modelling_game button, 
+#knowledge_game button, 
+#rationale_game button, 
+#umbrella_game button, 
+#challenges_game button, 
+#sdlc_game button {
+  border: 2px solid #09090b !important;
+  border-radius: 10px !important;
+  box-shadow: 2px 2px 0px 0px #000000 !important;
+  transition: all 120ms cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+#importance_game button:hover:not(:disabled), 
+#problem_solving_game button:hover:not(:disabled), 
+#modelling_game button:hover:not(:disabled), 
+#knowledge_game button:hover:not(:disabled), 
+#rationale_game button:hover:not(:disabled), 
+#umbrella_game button:hover:not(:disabled), 
+#challenges_game button:hover:not(:disabled), 
+#sdlc_game button:hover:not(:disabled) {
+  transform: translate(1px, 1px) !important;
+  box-shadow: 1px 1px 0px 0px #000000 !important;
+}
+
+/* Disable buttons visually under neo-brutalist constraints */
+#importance_game button:disabled, 
+#problem_solving_game button:disabled, 
+#modelling_game button:disabled, 
+#knowledge_game button:disabled, 
+#rationale_game button:disabled, 
+#umbrella_game button:disabled, 
+#challenges_game button:disabled, 
+#sdlc_game button:disabled {
+  opacity: 0.4 !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
